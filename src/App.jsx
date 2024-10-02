@@ -1,4 +1,4 @@
-function App() {
+const App = () => {
   return (
     <>
       <h1 className="text-4xl font-pb underline">Hello world!</h1>
@@ -9,6 +9,6 @@ function App() {
       <p className="font-pb">이것은 Pretendard Bold 폰트입니다.</p>
     </>
   );
-}
+};
 
 export default App;
