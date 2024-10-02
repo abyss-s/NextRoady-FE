@@ -8,11 +8,12 @@ export default {
       lg: "1024px",
       xl: "1280px",
     },
-    colors: {},
-
+    colors: {
+      /* https://tailwindcss.com/docs/customizing-colors */
+    },
     fontFamily: {
-      pr: ["Pretendard-Regular"],
       pl: ["Pretendard-Light"],
+      pr: ["Pretendard-Regular"],
       pm: ["Pretendard-Medium"],
       ps: ["Pretendard-SemiBold"],
       pb: ["Pretendard-Bold"],
@@ -22,4 +23,3 @@ export default {
   },
   plugins: [],
 };
-
