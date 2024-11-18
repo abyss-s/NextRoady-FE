@@ -2,7 +2,7 @@ import React from 'react';
 import GraphvizRenderer from './components/GraphvizRenderer/GraphvizRenderer';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
-function App() {
+const App = () => {
 //   const chart = `
 //   graph TD\n    A[리눅스 개발자 로드맵] --> B[프로그래밍 언어]\n    A --> C[데이터베이스]\n    A --> D[프레임워크]\n    A --> E[버전 관리]\n    A --> F[소프트웨어 개발 도구]\n    A --> G[네트워크 프로그래밍]\n    A --> H[배포 도구]\n\n    B --> B1[C]\n    B --> B2[C++]\n    B --> B3[Python]\n    B --> B4[Go]\n\n    C --> C1[관계형 데이터베이스]\n    C1 --> C1a[PostgreSQL]\n    C1 --> C1b[MySQL]\n    C --> C2[NoSQL 데이터베이스]\n    C2 --> C2a[MongoDB]\n    C2 --> C2b[Cassandra]\n\n    D --> D1[Qt]\n    D --> D2[GTK]\n    D --> D3[Qt Creator]\n\n    E --> E1[Git]\n    E --> E2[GitHub]\n    E --> E3[GitLab]\n\n    F --> F1[Make]\n    F --> F2[CMake]\n    F --> F3[Docker]\n\n    G --> G1[Sockets]\n    G --> G2[HTTP]\n\n    H --> H1[Ansible]\n    H --> H2[Kubernetes]\n    H --> H3[Docker Compose]\n
 // `;
@@ -45,6 +45,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
