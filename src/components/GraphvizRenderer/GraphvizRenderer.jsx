@@ -1,17 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import Graphviz from 'graphviz-react';
 
 const GraphvizRenderer = ({ dot }) => {
-  const graphRef = useRef(null);
-
   useEffect(() => {}, [dot]);
 
   return (
-    <div>
+    <div style={{ width: '100%', height: '500px' }}>
       <Graphviz
-        ref={graphRef}
         dot={dot}
-        options={{ width: 1200, height: 800 }}
+        options={{ useWorker: false, width: 1200, height: 800 }}
       />
     </div>
   );
