@@ -33,10 +33,15 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Pretendard-Bold';
   src: url('./assets/fonts/Pretendard-Bold.woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+body{
+   font-family: 'Pretendard-SemiBold', sans-serif;
 }
