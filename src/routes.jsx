@@ -1,19 +1,48 @@
-import { createBrowserRouter } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
-import App from "./App";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import Redirect from './pages/Login/Redirect';
+import Graph from './pages/Graph/Graph';
+import Chat from './pages/Chat/Chat';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/login',
+          element: <Login />,
+        },
+        {
+          path: '/redirect',
+          element: <Redirect />,
+        },
+        {
+          path: '/graph',
+          element: <Graph />,
+        },
+        {
+          path: '/chat',
+          element: <Chat />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: "/",
-        element: <App />,
-      },
-      // add more routes...
-    ],
-  },
-]);
-
+    future: {
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+      v7_fetcherPersist: true,
+      v7_normalizeFormMethod: true,
+      v7_partialHydration: true,
+      v7_skipActionErrorRevalidation: true,
+    },
+  }
+);
 export default router;
