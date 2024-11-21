@@ -1,10 +1,15 @@
-// src/components/Chat.js
 import React, { useState } from 'react';
-import roadmap from '../../apis/roadmap'; // 로드맵 관련 API 모듈
+import roadmap from '../../apis/roadmap';
+import GraphvizRenderer from '../../components/GraphvizRenderer/GraphvizRenderer';
+import YearlyRoadmapTable from '../../components/YearlyRoadmapTable/YearlyRoadmapTable';
+import MarkdownRenderer from '../../components/MarkdownRenderer/MarkdownRenderer';
 
 const Chat = () => {
   const [inputValue, setInputValue] = useState('');
   const [messages, setMessages] = useState([]);
+  const [graphData, setGraphData] = useState('');
+  const [yearlyRoadmapData, setYearlyRoadmapData] = useState(null);
+  const [jobOutlookData, setJobOutlookData] = useState('');
 
   const handleSend = async () => {
     if (!inputValue.trim()) return; // 빈 메시지 무시
@@ -21,41 +26,28 @@ const Chat = () => {
     try {
       let responseText = '';
 
-      // 1. 직업 이름 입력 받기
+      // 직업 이름 입력 받기
       if (messages.length === 0) {
         responseText = '어떤 개발자가 되고 싶은지 알려주세요😇';
       } else {
         const jobName = inputValue.trim();
 
-        // 2. 직업 검증
+        // 직업 검증
         const isValidJob = await roadmap.validateJob(jobName);
         if (isValidJob) {
-          responseText = `직업 "${jobName}"에 대한 이제 로드맵을 알려드릴게요.`;
+          responseText = `"${jobName}"에 대한 로드맵을 알려드릴게요.`;
 
-          // 3. 전체 로드맵 호출
+          // 1. 전체 로드맵 호출
           const wholeRoadmap = await roadmap.getWholeRoadmap(jobName);
-          responseText += `\n\n전체 로드맵: ${JSON.stringify(
-            wholeRoadmap,
-            null,
-            2
-          )}`;
+          setGraphData(JSON.stringify.wholeRoadmap);
 
-          // 4. 1년치 로드맵 및 추천 강의 호출
+          // 2. 1년치 로드맵 및 추천 강의 호출
           const yearlyRoadmap = await roadmap.getYearlyRoadmap(jobName);
-          responseText += `\n\n1년치 로드맵: ${JSON.stringify(
-            yearlyRoadmap.yearRoadMap,
-            null,
-            2
-          )}`;
-          responseText += `\n추천 강의: ${JSON.stringify(
-            yearlyRoadmap.lectureSuggestion,
-            null,
-            2
-          )}`;
+          setYearlyRoadmapData(JSON.stringify.yearlyRoadmap);
 
-          // 5. 직업 전망 호출
+          // 3. 직업 전망 호출
           const jobOutlook = await roadmap.getJobOutlook(jobName);
-          responseText += `\n\n직업 전망💡\n${jobOutlook}`;
+          setJobOutlookData(JSON.stringify.jobOutlook);
         } else {
           responseText = `"${jobName}"은(는) 유효하지 않은 직업입니다. 다시 시도해주세요.`;
         }
@@ -70,7 +62,7 @@ const Chat = () => {
       console.error('Error:', error);
       setMessages((prevMessages) => [
         ...prevMessages,
-        { text: 'Error fetching response. Please try again.', sender: 'ai' },
+        { text: '오류가 발생했습니다. 다시 시도해주세요.', sender: 'ai' },
       ]);
     }
   };
@@ -91,6 +83,16 @@ const Chat = () => {
               {msg.text}
             </div>
           ))}
+
+          {/* 답변 렌더링 */}
+          {graphData && <GraphvizRenderer dot={graphData} />}
+          {yearlyRoadmapData && (
+            <YearlyRoadmapTable
+              roadmapData={yearlyRoadmapData}
+              lectureData={yearlyRoadmapData.lectureSuggestion}
+            />
+          )}
+          {jobOutlookData && <MarkdownRenderer content={jobOutlookData} />}
         </div>
       </div>
       <div className="flex mt-4">
@@ -99,7 +101,7 @@ const Chat = () => {
           className="flex-1 p-2 border border-gray-400 rounded-l-lg"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          placeholder="질문을 입력하세요..."
+          placeholder="입력하세요..."
         />
         <button onClick={handleSend} className="p-2 bg-blue-500 rounded-r-lg">
           전송
