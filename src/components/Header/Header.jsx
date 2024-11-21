@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between bg-gray-700 text-white p-4 fixed top-0 w-full z-10">
-      <button onClick={() => navigate(-1)} className="flex items-center">
+      <button onClick={() => navigate('/login')} className="flex items-center">
         <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
         뒤로 가기
       </button>
