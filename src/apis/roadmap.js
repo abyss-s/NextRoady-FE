@@ -21,7 +21,7 @@ export const getWholeRoadmap = async (jobName) => {
     const response = await auth.post(`${SERVER}/roadmap/whole`, {
       job: jobName,
     });
-    return response.data; // 그래프비즈 형식으로 리턴
+    return response.data.wholeRoadMap; // 그래프비즈 형식으로 리턴
   } catch (error) {
     console.error('Error fetching whole roadmap:', error);
     throw error;

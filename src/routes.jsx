@@ -3,7 +3,6 @@ import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Redirect from './pages/Login/Redirect';
-import Graph from './pages/Graph/Graph';
 import Chat from './pages/Chat/Chat';
 
 const router = createBrowserRouter(
@@ -22,10 +21,6 @@ const router = createBrowserRouter(
         {
           path: '/redirect',
           element: <Redirect />,
-        },
-        {
-          path: '/graph',
-          element: <Graph />,
         },
         {
           path: '/chat',
