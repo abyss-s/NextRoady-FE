@@ -1,22 +1,107 @@
-# React + Vite
+# 💡 넥로디 프론트엔드 Repo입니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 주요 라이브러리
+tailwindcss
+axios
+react-router-dom
+react-markdown
+react-zoom-pan-pinch
+graphviz-react
 
-Currently, two official plugins are available:
+## 프로젝트 소스 폴더 구조
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+src
+ ┣ apis
+ ┃ ┣ auth.js
+ ┃ ┣ login.js
+ ┃ ┗ roadmap.js
+ ┣ assets
+ ┃ ┣ fonts
+ ┃ ┃ ┣ Pretendard-Bold.woff2
+ ┃ ┃ ┣ Pretendard-Light.woff2
+ ┃ ┃ ┣ Pretendard-Medium.woff2
+ ┃ ┃ ┣ Pretendard-Regular.woff2
+ ┃ ┃ ┗ Pretendard-SemiBold.woff2
+ ┃ ┗ images
+ ┃ ┃ ┗ logo.png
+ ┣ components
+ ┃ ┣ GraphvizRenderer
+ ┃ ┃ ┗ GraphvizRenderer.jsx
+ ┃ ┣ Layout
+ ┃ ┃ ┗ Layout.jsx
+ ┃ ┣ MarkdownRenderer
+ ┃ ┃ ┗ MarkdownRenderer.jsx
+ ┃ ┗ YearlyRoadmapTable
+ ┃ ┃ ┗ YearlyRoadmapTable.jsx
+ ┣ pages
+ ┃ ┣ Chat
+ ┃ ┃ ┗ Chat.jsx
+ ┃ ┣ Graph
+ ┃ ┃ ┗ Graph.jsx
+ ┃ ┣ Home
+ ┃ ┃ ┗ Home.jsx
+ ┃ ┗ Login
+ ┃ ┃ ┣ Login.jsx
+ ┃ ┃ ┗ Redirect.jsx
+ ┣ App.jsx
+ ┣ index.css
+ ┣ main.jsx
+ ┗ routes.jsxsrc
+ ┣ apis
+ ┃ ┣ auth.js
+ ┃ ┣ login.js
+ ┃ ┗ roadmap.js
+ ┣ assets
+ ┃ ┣ fonts
+ ┃ ┃ ┣ Pretendard-Bold.woff2
+ ┃ ┃ ┣ Pretendard-Light.woff2
+ ┃ ┃ ┣ Pretendard-Medium.woff2
+ ┃ ┃ ┣ Pretendard-Regular.woff2
+ ┃ ┃ ┗ Pretendard-SemiBold.woff2
+ ┃ ┗ images
+ ┃ ┃ ┗ logo.png
+ ┣ components
+ ┃ ┣ GraphvizRenderer
+ ┃ ┃ ┗ GraphvizRenderer.jsx
+ ┃ ┣ Layout
+ ┃ ┃ ┗ Layout.jsx
+ ┃ ┣ MarkdownRenderer
+ ┃ ┃ ┗ MarkdownRenderer.jsx
+ ┃ ┗ YearlyRoadmapTable
+ ┃ ┃ ┗ YearlyRoadmapTable.jsx
+ ┣ pages
+ ┃ ┣ Chat
+ ┃ ┃ ┗ Chat.jsx
+ ┃ ┣ Graph
+ ┃ ┃ ┗ Graph.jsx
+ ┃ ┣ Home
+ ┃ ┃ ┗ Home.jsx
+ ┃ ┗ Login
+ ┃ ┃ ┣ Login.jsx
+ ┃ ┃ ┗ Redirect.jsx
+ ┣ App.jsx
+ ┣ index.css
+ ┣ main.jsx
+ ┗ routes.jsx
 
-## ESLint+Prettier configuration
+```
 
-1. Create a .prettierrc file and add the following configuration
-2. Create a .eslintrc.cjs file and add the following configuration
-3. Create a .eslintignore file and add the following configuration
-4. Create a .prettierignore file and add the following configuration
+## 실행 방법
 
-## Tailwind CSS + PostCSS & Autoprefixer configuration
+```
+npm i
+npm run dev
+```
 
-1. Create a postcss.config.js file and add the following configuration
-2. Create a tailwind.config.js file and add the following configuration
-3. Create a index.css file and add the following configuration
-4. Import the index.css file in the index.html file
+## 환경변수 파일 템플릿
+
+```
+VITE_SERVER_DOMAIN=
+VITE_SERVER_PORT=
+VITE_SERVER_DOMAIN_PORT=
+
+VITE_REACT_DOMAIN=
+VITE_REACT_PORT=
+VITE_REACT_DOMAIN_PORT=
+```
