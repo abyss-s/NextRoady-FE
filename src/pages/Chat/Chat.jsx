@@ -33,9 +33,7 @@ const Chat = () => {
 
       // 직업 이름 입력 받기
       if (messages.length === 0) {
-        responseText =
-        `안녕하세요. 넥로디 봇 로디에요🤗 \n앞으로 어떤 개발자가 되고 싶은지 알려주세요. \nex. 프론트엔드 개발자, 백엔드 개발자 등`;
-      
+        responseText = `안녕하세요. 넥로디 봇 로디에요🤗 \n앞으로 어떤 개발자가 되고 싶은지 알려주세요. \nex. 프론트엔드 개발자, 백엔드 개발자 등`;
       } else {
         const jobName = inputValue.trim();
 
@@ -112,10 +110,10 @@ const Chat = () => {
             />
           )}
 
-          {/* 직업 전망 데이터 */}
+          {/* 3. 직업 전망 */}
           {jobOutlookData && <MarkdownRenderer markdown={jobOutlookData} />}
 
-          {/* 로딩 상태 */}
+          {/* 로딩 상태 관리 */}
           {isLoading && (
             <div className="flex justify-start">
               <div className="flex items-center space-x-2 text-gray-500">

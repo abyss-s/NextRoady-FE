@@ -3,10 +3,14 @@ import React from 'react';
 const YearlyRoadmapTable = ({ roadmapData, lectureData }) => {
   return (
     <div style={{ overflowX: 'auto' }}>
-      <h2 className="text-lg font-bold mb-4">1년치 로드맵</h2>
+      <div className="w-full h-px bg-gray-400 my-4"></div>
+      <h1 className="text-xl font-bold mb-4">⭐1년치 로드맵⭐</h1>
+      <h2 className="text-lg font-semibold mb-4">
+        1년 로드맵을 3개월 단위로 안내할게요.
+      </h2>
       {roadmapData.monthPlans.map((plan, index) => (
         <div key={index} className="mb-6">
-          <h3 className="text-md font-semibold mb-2">{plan.month}월</h3>
+          <h3 className="text-md font-semibold mb-2">📅{plan.month}월</h3>
           <table className="min-w-full table-auto border-collapse mb-4">
             <thead>
               <tr>
@@ -32,14 +36,17 @@ const YearlyRoadmapTable = ({ roadmapData, lectureData }) => {
         </div>
       ))}
 
-      <h2 className="text-lg font-bold mb-4">추천 강의</h2>
+      <h1 className="text-xl font-bold mb-4">⭐추천 강의⭐</h1>
+      <h2 className="text-lg font-semibold mb-4">
+        위 로드맵에 따라 추천된 강의 목록은 다음과 같아요.
+      </h2>
       {lectureData && lectureData.lectures.length > 0 ? (
         <table className="min-w-full table-auto border-collapse">
           <thead>
             <tr>
               <th className="border px-4 py-2">강의</th>
-              <th className="border px-4 py-2">Section</th>
-              <th className="border px-4 py-2">Link</th>
+              <th className="border px-4 py-2">파트</th>
+              <th className="border px-4 py-2 text-gray-600">링크</th>
             </tr>
           </thead>
           <tbody>
