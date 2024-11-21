@@ -68,47 +68,39 @@ const Chat = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100 p-4">
-      <div className="flex-1 overflow-y-auto">
-        <div className="space-y-2">
-          {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`p-2 rounded-lg ${
-                msg.sender === 'user'
-                  ? 'bg-blue-500 self-end'
-                  : 'bg-gray-300 text-black self-start'
-              }`}
-            >
-              {msg.text}
-            </div>
-          ))}
-
-          {/* 답변 렌더링 */}
-          {graphData && <GraphvizRenderer dot={graphData} />}
-          {yearlyRoadmapData && (
-            <YearlyRoadmapTable
-              roadmapData={yearlyRoadmapData}
-              lectureData={yearlyRoadmapData.lectureSuggestion}
-            />
-          )}
-          {jobOutlookData && <MarkdownRenderer content={jobOutlookData} />}
-        </div>
-      </div>
-      <div className="flex mt-4">
-        <input
-          type="text"
-          className="flex-1 p-2 border border-gray-400 rounded-l-lg"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder="입력하세요..."
-        />
-        <button onClick={handleSend} className="p-2 bg-blue-500 rounded-r-lg">
-          전송
-        </button>
+  <div className="flex flex-col h-screen bg-gray-100 p-4">
+    <div className="flex-1 overflow-y-auto">
+      <div className="space-y-2">
+        {messages.map((msg, index) => (
+          <div
+            key={index}
+            className={`p-2 rounded-lg ${
+              msg.sender === 'user'
+                ? 'bg-blue-500 self-end'
+                : 'bg-gray-300 text-black self-start'
+            }`}
+          >
+            {msg.text}
+          </div>
+        ))}
       </div>
     </div>
-  );
+
+    <div className="flex mt-4">
+      <input
+        type="text"
+        className="flex-1 p-2 border border-gray-400 rounded-l-lg bg-input text-gray-700"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        placeholder="입력하세요..."
+      />
+      <button onClick={handleSend} className="p-2 bg-button text-white rounded-r-lg">
+        전송
+      </button>
+    </div>
+  </div>
+);
+  
 };
 
 export default Chat;

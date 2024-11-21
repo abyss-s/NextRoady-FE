@@ -36,6 +36,9 @@ export default {
         DEFAULT: '#3B82F6', // 보조 파란색
         hover: '#2563EB', // 호버 시 색깔
       },
+      input: '#F7FAFC', // 입력 상자의 배경색
+      button: '#1D4ED8', // 버튼의 기본 색상
+
     },
     fontFamily: {
       pl: ['Pretendard-Light'],
