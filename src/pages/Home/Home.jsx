@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
-import './Home.css'; // 추가한 CSS 파일을 임포트
+import './Home.css';
 
 const Home = () => {
   const navigate = useNavigate();
