@@ -28,17 +28,16 @@ export default {
         800: '#2D3748',
         900: '#1A202C',
       },
-      primary: { // 주요 색상
-        DEFAULT: '#1D4ED8',  // 예시로 파란색을 기본 색상으로 설정
-        hover: '#1E40AF', // 호버 시 색상
+      primary: {
+        DEFAULT: '#1D4ED8', // blue
+        hover: '#1E40AF',
       },
-      secondary: { // 보조 색상
-        DEFAULT: '#3B82F6', // 보조 파란색
-        hover: '#2563EB', // 호버 시 색깔
+      secondary: {
+        DEFAULT: '#3B82F6', // sub-blue
+        hover: '#2563EB',
       },
-      input: '#F7FAFC', // 입력 상자의 배경색
-      button: '#1D4ED8', // 버튼의 기본 색상
-
+      input: '#F7FAFC',
+      button: '#1D4ED8',
     },
     fontFamily: {
       pl: ['Pretendard-Light'],
