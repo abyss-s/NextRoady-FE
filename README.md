@@ -1,12 +1,12 @@
 # 💡 넥로디 프론트엔드 Repo입니다.
 
 ## 주요 라이브러리
-tailwindcss
-axios
-react-router-dom
-react-markdown
-react-zoom-pan-pinch
-graphviz-react
+- tailwindcss
+- axios
+- react-router-dom
+- react-markdown
+- react-zoom-pan-pinch
+- graphviz-react
 
 ## 프로젝트 소스 폴더 구조
 
