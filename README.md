@@ -1,5 +1,5 @@
 # NextRoady(넥로디)
-
+## 인하대학교 전자상거래 기말 최종 프로젝트
 ### AI 기반 개발자 커리어 추천 웹사이트
 
 > [팀 노션 바로가기](https://absorbed-feverfew-0c5.notion.site/NextRoady-10bd1318465b80a98cafc283c6623df8?pvs=4)
