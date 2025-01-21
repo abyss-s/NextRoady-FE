@@ -1,4 +1,8 @@
-# 💡 넥로디 프론트엔드 Repo입니다.
+# NextRoady(넥로디)
+
+### AI 기반 개발자 커리어 추천 웹사이트
+
+> [팀 노션 바로가기](https://absorbed-feverfew-0c5.notion.site/NextRoady-10bd1318465b80a98cafc283c6623df8?pvs=4)
 
 ## 주요 라이브러리
 - tailwindcss
@@ -18,49 +22,7 @@ src
  ┃ ┗ roadmap.js
  ┣ assets
  ┃ ┣ fonts
- ┃ ┃ ┣ Pretendard-Bold.woff2
- ┃ ┃ ┣ Pretendard-Light.woff2
- ┃ ┃ ┣ Pretendard-Medium.woff2
- ┃ ┃ ┣ Pretendard-Regular.woff2
- ┃ ┃ ┗ Pretendard-SemiBold.woff2
  ┃ ┗ images
- ┃ ┃ ┗ logo.png
- ┣ components
- ┃ ┣ GraphvizRenderer
- ┃ ┃ ┗ GraphvizRenderer.jsx
- ┃ ┣ Layout
- ┃ ┃ ┗ Layout.jsx
- ┃ ┣ MarkdownRenderer
- ┃ ┃ ┗ MarkdownRenderer.jsx
- ┃ ┗ YearlyRoadmapTable
- ┃ ┃ ┗ YearlyRoadmapTable.jsx
- ┣ pages
- ┃ ┣ Chat
- ┃ ┃ ┗ Chat.jsx
- ┃ ┣ Graph
- ┃ ┃ ┗ Graph.jsx
- ┃ ┣ Home
- ┃ ┃ ┗ Home.jsx
- ┃ ┗ Login
- ┃ ┃ ┣ Login.jsx
- ┃ ┃ ┗ Redirect.jsx
- ┣ App.jsx
- ┣ index.css
- ┣ main.jsx
- ┗ routes.jsxsrc
- ┣ apis
- ┃ ┣ auth.js
- ┃ ┣ login.js
- ┃ ┗ roadmap.js
- ┣ assets
- ┃ ┣ fonts
- ┃ ┃ ┣ Pretendard-Bold.woff2
- ┃ ┃ ┣ Pretendard-Light.woff2
- ┃ ┃ ┣ Pretendard-Medium.woff2
- ┃ ┃ ┣ Pretendard-Regular.woff2
- ┃ ┃ ┗ Pretendard-SemiBold.woff2
- ┃ ┗ images
- ┃ ┃ ┗ logo.png
  ┣ components
  ┃ ┣ GraphvizRenderer
  ┃ ┃ ┗ GraphvizRenderer.jsx
@@ -84,7 +46,6 @@ src
  ┣ index.css
  ┣ main.jsx
  ┗ routes.jsx
-
 ```
 
 ## 실행 방법
