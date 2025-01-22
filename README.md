@@ -4,8 +4,6 @@
 
 ### AI 기반 개발자 커리어 추천 웹사이트, NextRoady🧭
 
-> 시연 영상
-
 ## 팀 소개
 
 > ### [💌 Team Notion](https://absorbed-feverfew-0c5.notion.site/NextRoady-10bd1318465b80a98cafc283c6623df8?pvs=4)
@@ -105,3 +103,17 @@ VITE_REACT_DOMAIN=
 VITE_REACT_PORT=
 VITE_REACT_DOMAIN_PORT=
 ```
+
+## 산출물 링크
+
+> 시연영상
+
+![시연영상](readme/video.gif)
+
+> 발표자료
+
+[Canva 링크 바로가기](https://www.canva.com/design/DAGV6TXLmjk/EY_3q4hwLYFoP2nOR5BqQg/edit?utm_content=DAGV6TXLmjk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+> 보고서
+
+[Google Drive 링크 바로가기](https://drive.google.com/file/d/1708UI4VNekpSqQLutEguhHFJ9HGIew7Y/view?usp=sharing)
